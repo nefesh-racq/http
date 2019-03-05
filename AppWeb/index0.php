@@ -15,22 +15,19 @@
         <?php
           include "conexion.php";
 
-          while (true) {
-            usleep(5000);
-            
-            $sql = "select * from coord";
-            $data = $conexion->query($sql);
+          $sql = "select * from coord";
+          $data = $conexion->query($sql);
 
-            if ($data->num_rows > 0) {
-              while ($row = $data->fetch_assoc()) {
-                echo "<tr>
-                  <td>".$row['id']."</td>
-                  <td>".$row['x']."</td>
-                  <td>".$row['y']."</td>
-                </tr>";
-              }
+          if ($data->num_rows > 0) {
+            while ($row = $data->fetch_assoc()) {
+              echo "<tr>
+                <td>".$row['id']."</td>
+                <td>".$row['x']."</td>
+                <td>".$row['y']."</td>
+              </tr>";
             }
           }
+
           $conexion->close();
         ?>
       </table>
