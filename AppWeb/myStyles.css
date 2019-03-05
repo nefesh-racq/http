@@ -1,0 +1,13 @@
+table {
+  width: 40%;
+  text-align: center;
+}
+
+th, td {
+  width: 25%;
+  background-color: #e0e0e0;
+}
+
+th {
+  background-color: #c8e6c9;
+}
