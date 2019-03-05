@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.epsilon.http.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="@string/txtv_latitud"
+            tools:layout_editor_absoluteX="15dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <EditText
+            android:id="@+id/etxtLatitud"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="107dp"
+            tools:layout_editor_absoluteY="4dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:text="@string/txtv_longitud"
+            tools:layout_editor_absoluteX="18dp"
+            tools:layout_editor_absoluteY="70dp" />
+
+        <EditText
+            android:id="@+id/etxtLongitud"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="109dp"
+            tools:layout_editor_absoluteY="58dp" />
+
+        <Button
+            android:id="@+id/btnGet"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:onClick="btnGet"
+            android:text="@string/btn_get"
+            tools:layout_editor_absoluteY="137dp" />
+
+        <Button
+            android:id="@+id/btnSet"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:onClick="btnGet"
+            android:text="@string/btn_set"
+            tools:layout_editor_absoluteY="186dp" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
