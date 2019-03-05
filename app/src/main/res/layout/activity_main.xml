@@ -58,7 +58,7 @@
             android:id="@+id/btnSet"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:onClick="btnGet"
+            android:onClick="btnSet"
             android:text="@string/btn_set"
             tools:layout_editor_absoluteY="186dp" />
 
