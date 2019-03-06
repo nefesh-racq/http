@@ -1,3 +1,10 @@
+<?php
+/**
+* test insert, select desde una app en android a un servidor
+* usando apache2
+*
+*/
+?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>

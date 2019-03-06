@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">Http</string>
 
+    <string name="txtv_id">ID</string>
     <string name="txtv_latitud">LATITUD</string>
     <string name="txtv_longitud">LONGITUD</string>
     <string name="btn_get">ENVIAR</string>
     <string name="btn_set">RECUPERAR</string>
+    <string name="btn_search">BUSCAR</string>
 </resources>
