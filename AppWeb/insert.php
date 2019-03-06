@@ -5,6 +5,11 @@ $id = 1;
 $x = $_POST['x'];
 $y = $_POST['y'];
 
+/*
+* verificamos q los campos no sean vacios para poder 
+* insertar algun dato a la tabla..
+*
+*/
 if (!empty($x) && !empty($y)) {
   $getId = "select id from coord order by id desc";
   $data = $conexion->query($getId);

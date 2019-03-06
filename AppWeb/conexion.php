@@ -1,8 +1,4 @@
 <?php
-/*
-* hecho por epsilon.
-*
-**/
 
 $hostname = 'localhost';	
 $database = 'AppWeb';		

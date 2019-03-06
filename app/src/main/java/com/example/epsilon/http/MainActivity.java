@@ -103,17 +103,64 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*
+    * actualiza los datos de nuestra tabla del servidor
+    * este metodo es el mismo que el de isnertToServer no cambia nada
+    * solo tiene un parametro mas para el id
+    * */
+    private void updateToServer(String URL) {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Toast.makeText(getApplicationContext(), "OPERACION EXITOSA..", Toast.LENGTH_SHORT).show();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        }){
+            /*
+            * agregamos los parametros que se desean enviar al servidor
+            * */
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<String, String>();
+
+                params.put("id", etxtId.getText().toString());
+                params.put("x", etxtLatitud.getText().toString());
+                params.put("y", etxtLongitud.getText().toString());
+
+                return params;
+            }
+        };
+
+        requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+    }
+
+
+    /*
     * eventos para los botones de la app
+    * todas las urls son de un server local no remotro
+    *
     * */
     public void btnSet(View view) {
         insertToServer("http://192.168.1.105/AppWeb/insert.php");
     }
 
     public void btnSearch(View view) {
-        selectFromServer("http://192.168.1.105/AppWeb/search.php?id=" + etxtId.getText());
+        selectFromServer("http://192.168.1.105/AppWeb/select.php?id=" + etxtId.getText());
     }
 
-    public void btnOtro(View view) {
-        selectFromServer("http://192.168.1.105/AppWeb/search.php?id=" + etxtId.getText());
+    public void btnUpdate(View view) {
+        updateToServer("http://192.168.1.105/AppWeb/update.php");
+    }
+
+    public void btnDelete(View view) {
+        /*
+        * llamamos al mismo metodo pero usamos el archivo delete.php
+        * */
+        updateToServer("http://192.168.1.105/AppWeb/delete.php");
+
     }
 }

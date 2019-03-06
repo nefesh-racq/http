@@ -84,12 +84,21 @@
             tools:layout_editor_absoluteY="137dp" />
 
         <Button
-            android:id="@+id/btnOtro"
+            android:id="@+id/btnUpdate"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:onClick="btnOtro"
-            android:text="@string/btn_set"
-            tools:layout_editor_absoluteY="186dp" />
+            android:text="@string/btn_update"
+            tools:layout_editor_absoluteY="186dp"
+
+            android:onClick="btnUpdate" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_delete"
+
+            android:onClick="btnDelete" />
 
     </LinearLayout>
 

@@ -1,7 +1,6 @@
 <?php
 /**
-* test insert, select desde una app en android a un servidor
-* usando apache2
+* test insert, select, update, delete desde una app en android a un servidor apache2
 *
 */
 ?>
