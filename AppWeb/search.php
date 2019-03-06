@@ -16,7 +16,7 @@ if (!empty($id)) {
    * EL PRIMER echo QUE APARECE DEBE SER echo $json
    * oh da error, por que ese "echo" es el que muestra los datos
    * para que lo recupere la app
-   *
+   *s
    */
   mysqli_close($conexion);
 

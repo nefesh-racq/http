@@ -9,10 +9,14 @@ if (!empty($x) && !empty($y)) {
   $getId = "select id from coord order by id desc";
   $data = $conexion->query($getId);
 
+  /*
+  * si existe algun registro
+  * se recupera el ultimo id para generar nuestro id
+  * 
+  */
   if ($data->num_rows > 0) {
     $row = $data->fetch_assoc();
     echo $row['id']."<br>";
-    //echo
     $id = $row['id'] + 1;
   }
 
@@ -26,4 +30,4 @@ else {
   echo "no hay ningun dato";
 }
 
- ?>
+?>
